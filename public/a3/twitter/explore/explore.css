@@ -1,0 +1,94 @@
+
+
+.wd-outer {
+    background-color: black;
+}
+.wd-body{
+    /*background-color: black;*/
+    font-family: Arial, serif;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    margin-left: 16px;
+    margin-right: 16px;
+    /*why not just left ONLY LEFT ？*/
+    overflow: auto;
+    padding: 16px;
+}
+
+.wd-search-entity{
+    position: absolute;
+    left: 50px;
+    /*why is it taking a position to the left of the search bar*/
+}
+.wd-search-twitter-input{
+    background-color: darkgray;
+    /* no change */
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 5px 500px 5px 35px;
+}
+.wd-explore-settings{
+    color: rgba(26,125,188,255);
+    /*absolute???  distance to border??*/
+    padding-right: 12px;
+    float:right;
+    font-size: x-large;
+}
+
+
+.wd-card{
+    font-size: 15px;
+    padding: 16px;
+    width: 80px;
+    height: 12px;
+    float: left;
+    text-decoration-line: none;
+}
+.wd-selected-card{
+    color: rgb(29,161,242);
+    border-bottom-width: 20px;
+    border-bottom: rgb(29,161,242);
+    border-bottom-style: solid;
+}
+.wd-unselected-cards{
+    color: rgb(110, 118, 125);
+}
+.wd-float-done{
+    clear: both;
+}
+
+.wd-post{
+    padding: 16px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(47, 51, 54);
+    /* extra space over the img */
+    overflow:auto;
+}
+.wd-post-headline{
+    font-size: 16px;
+    color: white;
+}
+.wd-post-topic-tweets{
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-post-author{
+    color: white;
+    font-size: 13px;
+}
+
+.wd-post-img{
+    float:right;
+    width: 100px;
+    height:100px;
+    border-radius: 15px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+
+
