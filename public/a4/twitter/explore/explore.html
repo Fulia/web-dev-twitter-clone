@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link href="explore.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid p-3 justify-items-center bg-black">
+    <div class="row mt-1 mx-5 bg-black justify-content-center">
+<!--        <div class="col-1">-->
+<!--        </div>-->
+<!--  ???      加d-flex-->
+        <div class="col-2 col-lg-1 col-xl-2 mx-1">
+            <div class="list-group mb-1 ">
+                <a href="https://twitter.com" class="list-group-item">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item ">
+                    <i class="fas fa-home"></i>
+    <!--                d-none d-xl-inline-flex 文字在 xl 和 xxl 的时候才显示-->
+                    <span class="d-none d-xl-inline-flex">Home</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item active">
+                    <i class="fas fa-hashtag"></i>
+                    <span class="d-none d-xl-inline-flex">Explore</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item">
+                    <i class="fas fa-bell"></i>
+                    <span class="d-none d-xl-inline-flex">Notifications</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="d-none d-xl-inline-flex">Messages</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="d-none d-xl-inline-flex">Bookmarks</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item">
+                    <i class="fas fa-list"></i>
+                    <span class="d-none d-xl-inline-flex">Lists</span>
+                </a>
+                <a href="../edit-profile.html" class="list-group-item">
+                    <i class="fas fa-user-alt"></i>
+                    <span class="d-none d-xl-inline-flex">Profile</span>
+                </a>
+                <a href="https://twitter.com/home" class="list-group-item">
+                    <i class="fas fa-ellipsis-h override-bs "></i>
+                    <span class="d-none d-xl-inline-flex">More</span>
+                </a>
+            </div>
+<!--            只有 d-grid 才能实现 button的full width-->
+            <div class="d-grid">
+                <button class="btn btn-primary rounded-pill">Tweet</button>
+            </div>
+        </div>
+        <div class="col-9 col-lg-7 col-xl-6 justify-content-center align-content-center mx-1">
+            <div class="row d-flex align-items-center search-cog mb-2">
+<!--                <div class="input-group justify-content-center align-items-center">-->
+<!--                    <span class="fas fa-search"></span>-->
+<!--                    <input type="search" class="form-control rounded-pill" placeholder="Search Twitter" aria-label="Search"-->
+<!--                           aria-describedby="search-addon" />-->
+
+<!--                </div>-->
+<!-- ??? 只有通过col的方式分割 input 和 config吗？ -->
+                <div class="col-11 form-group has-search">
+                    <span class="fa fa-search form-control-feedback font-darker-gray"></span>
+                    <input type="search" class="form-control border-0 rounded-pill bg-dark-dark-gray font-darker-gray" placeholder="Search Twitter" aria-label="Search"
+                           aria-describedby="search-addon">
+                </div>
+                <div class="col-1 setting  float-end">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <div class="nav-tab-content">
+                <ul class="nav nav-tabs border-0 mb-2"  id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="for-you.html">For You</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trending.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link d-none d-md-block" href="entertainment.html">Entertainment</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="ForYouContent">
+                    <div class="d-grid border flex-column">
+                        <div class="header-img ">
+                            <img class="img-fluid" src="../pics/Starship-Mk1-Day.jpeg" alt="SpaceX Starship">
+                            <span class="text-overlay">SpaceX's Starship</span>
+                        </div>
+                        <div class="row mx-0 p-1  align-items-center tweet-row">
+                            <div class="col-10">
+                                <div class="gray-text">Web Development</div>
+                                <div class="d-flex justify-content-start align-content-center">
+                                    <div class="certified">ReactJS <i class="fas fa-check-circle fa-1x"></i></div>
+                                    <div class="gray-text ps-1">- 2h</div>
+                                </div>
+                                <div class="headline">React.js is a component based front end library that makes
+                                    it very easy to build Single Page Applications or SPAs</div>
+                            </div>
+                            <div class="col-2">
+                                <img class="img-fluid rounded tweet-image" style="color" src="../pics/react_logo_icon_144942.png" alt="React Logo">
+                            </div>
+                        </div>
+                        <div class="row mx-0 p-1  align-items-center tweet-row">
+                            <div class="col-10">
+                                <div class="d-flex justify-content-start align-content-center">
+                                    <div class="certified">JavaScript <i class="fas fa-check-circle fa-1x"></i></div>
+                                    <div class="gray-text ps-1">- 2h</div>
+                                </div>
+                                <div class="headline">JavaScript is programming language that can run on browsers
+                                as well as desktops</div>
+                                <div class="gray-text">123K Tweets</div>
+
+
+                            </div>
+                            <div class="col-2">
+                                <img class="img-fluid rounded tweet-image" src="../pics/js.png" alt="Javascript Logo">
+                            </div>
+                        </div>
+                        <div class="row mx-0 p-1  align-items-center tweet-row">
+                            <div class="col-10">
+                                <div class="gray-text">Web Development</div>
+                                <div class="headline">jQuery</div>
+                                <div class="gray-text">123K Tweets</div>
+
+
+                            </div>
+                            <div class="col-2">
+                                <img class="img-fluid rounded tweet-image" src="../pics/jquery.png" alt="jQuery Logo">
+                            </div>
+                        </div>
+                        <div class="row mx-0 p-1  align-items-center tweet-row">
+                            <div class="col-10">
+                                <div class="gray-text">Web Development</div>
+                                <div class="d-flex justify-content-start align-content-center">
+                                    <div class="certified">NodeJS <i class="fas fa-check-circle fa-1x"></i></div>
+                                    <div class="gray-text ps-1">- 2h</div>
+                                </div>
+                                <div class="gray-text">123K Tweets</div>
+
+
+                            </div>
+                            <div class="col-2">
+                                <img class="img-fluid tweet-image" src="../pics/NodeJS.svg" alt="NodeJS Logo">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-3 col-xl-3 mx-1 font-darker-gray">
+            <div class="who-to-follow bg-dark-dark-gray d-grid  ">
+                <div class="row mx-0 p-1  align-items-center">
+                    <div class="certified">Who to follow</div>
+                </div>
+                <div class="row mx-0 p-1  align-items-center">
+                    <div class="col-3 col-lg-2 p-1">
+                        <img class="img-fluid rounded account-avatar rounded-circle" src="../pics/java.webp" alt="Java Logo">
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="d-flex justify-content-start align-content-center">
+                            <div class="certified">Java <i class="fas fa-check-circle fa-1x"></i></div>
+                        </div>
+                        <div class="">@Java </div>
+                    </div>
+                    <div class="col-3 col-lg-4 p-1">
+<!--                        <div class="d-grid">-->
+                            <button class="float-end btn btn-primary rounded-pill" style="line-height: normal">Follow</button>
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="row mx-0 p-1  align-items-center ">
+                    <div class="col-3 col-lg-2 p-1">
+                        <img class="img-fluid  account-avatar rounded-circle" src="../pics/relativity.jpeg"
+                             alt="Relativity Space Logo">
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="d-flex justify-content-start align-content-center">
+                            <div class="certified">Relativity Space <i class="fas fa-check-circle fa-1x"></i></div>
+                        </div>
+                        <div>@relativityspace </div>
+                    </div>
+                    <div class="col-3 col-lg-4 p-1">
+                        <!--                        <div class="d-grid">-->
+                        <button class="float-end btn btn-primary rounded-pill" style="line-height: normal">Follow</button>
+                        <!--                        </div>-->
+                    </div>
+                </div>
+                <div class="row mx-0 p-1  align-items-center">
+                    <div class="col-3 col-lg-2 p-1">
+                        <img class="img-fluid  account-avatar rounded-circle" src="../pics/virgin.svg"
+                             alt="Virgin Galactic Logo">
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="d-flex justify-content-start align-content-center">
+                            <div class="certified">Virgin Galactic <i class="fas fa-check-circle fa-1x"></i></div>
+                        </div>
+                        <div class="">@virgingalactic </div>
+                    </div>
+                    <div class="col-3 col-lg-4 p-1">
+                        <!--                        <div class="d-grid">-->
+                        <button class="float-end btn btn-primary rounded-pill" style="line-height: normal">Follow</button>
+                        <!--                        </div>-->
+                    </div>
+                </div>
+                <div class="row mx-0 p-1  align-items-center ">
+                    <div class="col-3 col-lg-2 p-1">
+                        <img class="img-fluid account-avatar rounded-circle" src="../pics/NASAmeatball1200.png"
+                             alt="NASA Logo">
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="d-flex justify-content-start align-content-center">
+                            <div class="certified">NASA <i class="fas fa-check-circle fa-1x"></i></div>
+                        </div>
+                        <div class="">@NASA </div>
+                    </div>
+                    <div class="col-3 col-lg-4 p-1">
+                        <!--                        <div class="d-grid">-->
+                        <button class="float-end btn btn-primary rounded-pill" style="line-height: normal">Follow</button>
+                        <!--                        </div>-->
+                    </div>
+                </div>
+                <div class="row mx-0 p-1  align-items-center ">
+                    <div class="col-3 col-lg-2 p-1">
+                        <img class="img-fluid account-avatar rounded-circle" src="../pics/Tesla_T_symbol.svg.png"
+                             alt="Tesla Logo">
+                    </div>
+                    <div class="col-6 p-0">
+                        <div class="d-flex justify-content-start align-content-center">
+                            <div class="certified">Tesla <i class="fas fa-check-circle fa-1x"></i></div>
+                        </div>
+                        <div class="">@Tesla </div>
+                    </div>
+                    <div class="col-3 col-lg-4 p-1">
+                        <!--                        <div class="d-grid">-->
+                        <button class="float-end btn btn-primary rounded-pill" style="line-height: normal">Follow</button>
+                        <!--                        </div>-->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

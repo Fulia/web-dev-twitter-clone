@@ -1,0 +1,125 @@
+.wd-outer{
+    background-color: black;
+}
+
+.wd-inner{
+    padding:15px;
+    border-style: solid;
+    border-width: 2px;
+    font-family: Arial, serif;
+    width: 620px;
+    text-decoration-line: none;
+}
+
+.wd-div{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+    padding: 12px 16px 12px 16px;
+    overflow: auto;
+}
+
+.wd-div-post{
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: rgb(47, 51, 54);
+    padding: 12px 16px 0 16px;
+    overflow: auto;
+}
+.wd-color-white{
+    color: white;
+}
+.wd-color-lightgray{
+    color: lightgray;
+}
+
+.wd-font-15{
+    font-size: 15px;
+}
+
+.wd-font-bold{
+    font-weight: bold;
+}
+
+.wd-float-left{
+    float:left;
+    /*overflow: auto;*/
+}
+.wd-bookmarks-title{
+    font-size: 20px;
+}
+
+.wd-bookmarks-handle{
+    font-size: 13px;
+}
+
+.wd-bookmarks-posts{
+    padding: 0 16px 0 12px;
+    width: 506px;
+}
+
+.wd-bookmarks-posts-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.wd-bookmarks-post-content{
+    border:none;
+    width: 506px;
+    padding:0 16px 12px 0;
+}
+/*.wd-bookmarks-repost{*/
+/*    border:none*/
+/*}*/
+.wd-bookmarks-repost{
+    /*display: inline-block;*/
+    /*float: left;*/
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: rgb(47, 51, 54);
+    padding: 12px;
+}
+
+.wd-bookmarks-repost-img{
+    width: 504px;
+    height: 264px;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-color: rgb(47, 51, 54);
+    display: block;
+    /*why we need this block https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image*/
+    /*overflow: hidden;*/
+}
+
+.wd-bookmarks-repost-content{
+    padding: 12px;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-decoration-line: none;
+}
+
+.wd-bookmarks-repost-icons{
+    padding: 12px 0 12px 0;
+    display: flex;
+    column-gap: 80px;
+    color: lightgray;
+}
+.wd-icon-number{
+    margin: 12px;
+}
+
+
+.wd-bookmarks-repost-avatar{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
