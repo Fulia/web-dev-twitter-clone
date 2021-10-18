@@ -1,0 +1,403 @@
+.rotate-paragraph {
+    width: 250px;
+    height: 250px;
+    transform: rotate(90deg);
+}
+
+.rotate-list {
+    transform: rotate(12deg);
+    width: 100px;
+    background-color: red;
+    color: white;
+}
+
+.rotate-list-counter-clock{
+    transform: rotate(-12deg);
+    width: 100px;
+    background-color: cadetblue;
+    color: white;
+}
+
+.rotate-list-items li {
+    width: 100px;
+    text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+    transform: rotate(-10deg);
+    background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+    transform: rotate(2deg);
+    background-color: blue;
+    color: white;
+}
+.rotate-list-items li:nth-child(3) {
+    transform: rotate(10deg);
+    background-color: red;
+}
+.rotate-image {
+    transform: rotate(-10deg);
+}
+.rotate-image-counter{
+    transform: rotate(10deg);
+}
+
+.rotate-table {
+    position: relative;
+    left: 50px;
+    transform: rotate(15deg);}
+.rotate-table tr:nth-child(1) {
+    background-color: black;
+    color: white;}
+.rotate-table tr:nth-child(n+2) {
+    background-color: yellow;}
+.rotate-table tr:nth-child(n+5) {
+    background-color: blue;
+    color: white;}
+.rotate-table tr:nth-child(n+8) {
+    background-color: red;}
+.rotate-table tr:nth-child(n+11) {
+    background-color: green;
+    color: white;
+}
+
+.gradients-linear {
+    background: linear-gradient(yellow, red);
+    width: 200px;
+    height: 200px;
+}
+
+.gradients-linear-example {
+    background: linear-gradient(lightblue, mediumpurple);
+    width: 500px;
+    height: 100px;
+}
+
+.gradients-radial {
+    background: radial-gradient(yellow, green);
+    width: 200px;
+    height: 200px;
+}
+
+.gradients-radial-example {
+    background: radial-gradient(greenyellow, deepskyblue);
+    width: 500px;
+    height: 100px;
+}
+
+.gradients-positioned {
+    background:
+            radial-gradient(at top left, blue, red);
+    width: 200px;
+    height: 200px;
+    color: white;
+}
+
+.gradients-positioned-example {
+    background:
+            radial-gradient(at top right, palegreen, darkgreen);
+    width: 500px;
+    height: 100px;
+    color: lightgray;
+}
+
+.animation-keyframes {
+    position: relative;
+    top: 0px;
+    animation-duration: 7s;
+    animation-name: slidein;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+}
+
+@keyframes slidein {
+    from {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 100%;
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        color: black;
+    }
+
+
+    50% {
+        position: relative;
+        top: -200px;
+        font-size: 300%;
+        margin-left: 25%;
+        width: 400px;
+        height: 400px;
+        background-color: blue;
+        color: white;
+    }
+
+    to {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 0%;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        color: white;
+    }
+}
+
+.animation-keyframes-example {
+    position: relative;
+    top: 0px;
+    animation-duration: 3s;
+    animation-name: bigM;
+    width: 100px;
+    height: 300px;
+    background-color: darkgreen;
+    color: darkgrey;
+}
+
+@keyframes bigM {
+    from {
+        position: relative;
+        top: 0px;
+        font-size: 200%;
+        margin-left: 0%;
+        width: 100px;
+        height: 300px;
+        background-color: darkgreen;
+        color: white;
+    }
+
+
+    25% {
+        position: relative;
+        top: -200px;
+        font-size: 300%;
+        margin-left: 25%;
+        width: 300px;
+        height: 100px;
+        background-color: forestgreen;
+        color: lightslategray;
+    }
+    50% {
+        position: relative;
+        top: -100px;
+        font-size: 300%;
+        margin-left: 50%;
+        width: 300px;
+        height: 100px;
+        background-color: green;
+        color: gray;
+    }
+    75% {
+        position: relative;
+        top: -200px;
+        font-size: 300%;
+        margin-left: 75%;
+        width: 300px;
+        height: 100px;
+        background-color: mediumseagreen;
+        color: darkgrey;
+    }
+
+    to {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 100%;
+        width: 100px;
+        height: 300px;
+        background-color: palegreen;
+        color: gray;
+    }
+}
+
+
+.flex-container {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+.flex-box {
+    border: 5px gray solid;
+    margin: 10px;
+    padding: 10px;
+}
+.flex-box-1 {
+    background-color: yellow;
+}
+.flex-box-2 {
+    background-color: blue;
+    color: white;
+}
+.flex-box-3 {
+    background-color: red;
+    color: white;
+}
+
+
+.flex-container-row {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+}
+
+.flex-container-center {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.flex-container-end {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: end;
+}
+
+
+.flex-container-space-around {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.flex-container-space-between {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container-start{
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.flex-container-flex-center {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.flex-container-stretch{
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+
+}
+.flex-container-stretch > .flex-box{
+    flex-basis: 100%;
+}
+
+
+@media (min-width: 0px) and (max-width: 300px) {
+    body {
+        background-color: yellow;
+    }
+    .media-query {
+        background-color: red;
+        color: white;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    body {
+        background-color: blue;
+        color: white;
+    }
+    .media-query {
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    body {
+        background-color: red;
+        color: white;
+    }
+    .media-query {
+        background-color: blue;
+        color: white;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    /*body {*/
+    /*    background-color: lightblue;*/
+    /*}*/
+    .div1 {
+        background-color: cadetblue;
+        color: gray;
+    }
+    .paragraph{
+        font-family: "Al Bayan", serif;
+    }
+    .dog-img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    /*body {*/
+    /*    background-color: lightblue;*/
+    /*}*/
+    .div1 {
+        background-color: lightpink;
+        color: deeppink;
+    }
+    .paragraph{
+        font-family: Chalkboard, serif;
+        font-size: larger;
+    }
+    .dog-img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    /*body {*/
+    /*    background-color: lightblue;*/
+    /*}*/
+    .div1 {
+        background-color: yellowgreen;
+        color: darkgreen;
+    }
+    .paragraph{
+        font-family: Maku, serif;
+        font-size: xx-large;
+    }
+    .dog-img{
+        width: 600px;
+        height: 600px;
+    }
+}
+
+
+
