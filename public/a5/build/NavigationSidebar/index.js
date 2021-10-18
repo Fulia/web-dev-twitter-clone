@@ -9,7 +9,7 @@ const NavigationSidebar = (active) => {
                 ${navLinks.map(navLink => {
                     return(
                     // conditionally show active per page
-                    `<a class="list-group-item ${active.includes(navLink.linkName) ? 'active':''}" href=${navLink.linkPath} >
+                    `<a class="list-group-item ${active.toLowerCase().includes(navLink.linkName.toLowerCase()) ? 'active':''}" href=${navLink.linkPath} >
                         <i class="${navLink.icon} pe-2"></i>
                         <span class="d-none d-xl-inline-flex">${navLink.linkName}</span>
                     </a>`)
