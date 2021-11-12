@@ -1,9 +1,9 @@
 import React from "react";
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
-const A6 = () => {
+const A7 = () => {
     return (
         <>
             {/*<Route path={["/a6/twitter", "/a6/twitter/home"]}*/}
@@ -15,24 +15,21 @@ const A6 = () => {
             {/*<Route path={"/a6/practice"}*/}
             {/*       exact={true} component={Practice}/>*/}
 
-            <h2>Assignment 6</h2>
-            <Link to="/a6/hello">
-                Hello
-            </Link> | &nbsp;
-            <Link to="/a6/practice">
+            <h2>Assignment 7</h2>
+            <Link to="/a7">
                 Practice
             </Link> | &nbsp;
-            <Link to="/a6/twitter/explore">
+            <Link to="/a7/twitter/home">
                 Build
             </Link> | &nbsp;
-            <Link to="/a6/twitter/home">
+            <Link to="/a7/twitter/profile">
                 Challenge
             </Link> | &nbsp;
-            <Link to="/a7">
-                A7
+            <Link to="/a6">
+                A6
             </Link>
         </>
     )
 };
 
-export default A6;
+export default A7;
