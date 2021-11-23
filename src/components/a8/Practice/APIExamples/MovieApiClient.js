@@ -5,13 +5,15 @@ import React, {useEffect, useState} from "react";
 
 // const funcB = (movies) => setM
 
+const route = process.env.NODE_ENV === "development" ? "http://localhost:4000/" : "https://twitter-clone-server-node.herokuapp.com/";
+const movieAPI = route + "api/movies"
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]); // declare empty array local state variable movies
     // when the component first loads
 // send an HTTP request to this URL
     useEffect(() =>
             // fetch by default method: GET
-            fetch('http://localhost:4000/api/movies')
+            fetch(movieAPI)
                 .then(response => response.json())  // anonymous function
                 // parse the JSON in the HTTP response from server
                 // set movies state variable with movies from server
@@ -22,7 +24,7 @@ const MovieApiClient = () => {
     const deleteMovie = (movie) =>
         // fetch movies from API on server
         // use DELETE HTTP method
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch( movieAPI +"/"+ movie._id, {
             method: 'DELETE' // change the method
         })
             // parse JSON response from server
@@ -37,7 +39,7 @@ const MovieApiClient = () => {
     const onMovieTitleChange = (event) => // handle create movie click event
         setMovie({...movie, title: event.target.value});
     const createMovieClickHandler = () =>
-        fetch('http://localhost:4000/api/movies', {  // send HTTP message to server URL /api/movies
+        fetch(movieAPI, {  // send HTTP message to server URL /api/movies
             method: 'POST',    // use HTTP POST // embed movie in message body as a string
             body: JSON.stringify(movie),  // tell server string is formatted as JSON
             headers: {
@@ -49,8 +51,9 @@ const MovieApiClient = () => {
 
 
     // save the any update/change
+    // fetch input : `http://localhost:4000/api/movies/${movie._id}`
     const saveMovie = () =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(movieAPI +"/"+ movie._id, {
             method: 'PUT',    // use PUT method
             body: JSON.stringify(movie),
             headers: {

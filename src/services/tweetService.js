@@ -1,5 +1,6 @@
-const TWEET_API = 'https://twitter-clone-server-node.herokuapp.com/api/tweets';   // base URL of API
-
+// const TWEET_API = 'https://twitter-clone-server-node.herokuapp.com/api/tweets';   // base URL of API
+const route = process.env.NODE_ENV === "development" ? "http://localhost:4000/" : "https://twitter-clone-server-node.herokuapp.com/";
+const TWEET_API =  route + 'api/tweets';
 
 // function to fetch tweets and notify reducer
 export const fetchAllTweets = (dispatch) =>{
@@ -42,7 +43,7 @@ export const postNewTweet = (dispatch, newTweet) =>
 
 // function to send HTTP request to delete tweet
 export const deleteTweet = (dispatch, tweet) =>
-    fetch(`${TWEET_API}/${tweet._id}`, { // encode tweet ID at end of the URL
+    fetch(TWEET_API + "/" + tweet._id, { // encode tweet ID at end of the URL
         method: 'DELETE'
     }).then(response => dispatch({  // ignore response, just dispatch to reducer
         type: 'delete-tweet',  // send reducer a 'delete-tweet' event
@@ -51,7 +52,7 @@ export const deleteTweet = (dispatch, tweet) =>
 
 
 export const likeTweet = (dispatch, tweet) =>
-    fetch(`${TWEET_API}/${tweet._id}/like`, {
+    fetch(TWEET_API + "/" + tweet._id + "/like", {
         method: 'PUT'
     })
         .then(response =>

@@ -1,4 +1,6 @@
-const PROFILE_API = 'https://twitter-clone-server-node.herokuapp.com/api/profile';   // base URL of API
+// select route per environment
+const route = process.env.NODE_ENV === "development" ? "http://localhost:4000/" : "https://twitter-clone-server-node.herokuapp.com/";
+const PROFILE_API =  route + 'api/profile';   // base URL of API
 
 // function to fetch profile and notify reducer
 export const fetchProfile = (dispatch) =>{
