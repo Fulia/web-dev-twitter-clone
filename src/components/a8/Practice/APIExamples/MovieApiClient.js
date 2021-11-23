@@ -39,7 +39,7 @@ const MovieApiClient = () => {
     const onMovieTitleChange = (event) => // handle create movie click event
         setMovie({...movie, title: event.target.value});
     const createMovieClickHandler = () =>
-        fetch('http://localhost:4000/api/movies', {  // send HTTP message to server URL /api/movies
+        fetch(movieAPI, {  // send HTTP message to server URL /api/movies
             method: 'POST',    // use HTTP POST // embed movie in message body as a string
             body: JSON.stringify(movie),  // tell server string is formatted as JSON
             headers: {
