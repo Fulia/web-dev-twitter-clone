@@ -1,4 +1,4 @@
-const PROFILE_API = 'http://localhost:4000/api/profile';   // base URL of API
+const PROFILE_API = 'https://twitter-clone-server-node.herokuapp.com/api/profile';   // base URL of API
 
 // function to fetch profile and notify reducer
 export const fetchProfile = (dispatch) =>{

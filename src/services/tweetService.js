@@ -1,4 +1,4 @@
-const TWEET_API = 'http://localhost:4000/api/tweets';   // base URL of API
+const TWEET_API = 'https://twitter-clone-server-node.herokuapp.com/api/tweets';   // base URL of API
 
 
 // function to fetch tweets and notify reducer
