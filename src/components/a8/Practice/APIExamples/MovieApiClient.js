@@ -5,7 +5,7 @@ import React, {useEffect, useState} from "react";
 
 // const funcB = (movies) => setM
 
-const route = process.env.NODE_ENV === "development" ? "http://localhost:4000/" : "https://twitter-clone-server-node.herokuapp.com/"
+const route = process.env.NODE_ENV === "development" ? "http://localhost:4000/" : "https://twitter-clone-server-node.herokuapp.com/";
 const movieAPI = route + "api/movies"
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]); // declare empty array local state variable movies
@@ -51,8 +51,9 @@ const MovieApiClient = () => {
 
 
     // save the any update/change
+    // fetch input : `http://localhost:4000/api/movies/${movie._id}`
     const saveMovie = () =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(movieAPI +"/"+ movie._id, {
             method: 'PUT',    // use PUT method
             body: JSON.stringify(movie),
             headers: {
