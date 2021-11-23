@@ -1,0 +1,42 @@
+[
+    {
+        "linkName":"Home",
+        "linkPath":"/a7/twitter/home",
+        "icon":"fas fa-home"
+    },
+    {
+        "linkName":"Explore",
+        "linkPath":"/a7/twitter/explore",
+        "icon":"fas fa-hashtag"
+    },
+    {
+        "linkName":"Notifications",
+        "linkPath":"#",
+        "icon":"fas fa-bell"
+    },
+    {
+        "linkName":"Messages",
+        "linkPath":"",
+        "icon":"fas fa-envelope"
+    },
+    {
+        "linkName":"Bookmarks",
+        "linkPath":"",
+        "icon":"fas fa-bookmark"
+    },
+    {
+        "linkName":"Lists",
+        "linkPath":"",
+        "icon":"fas fa-list"
+    },
+    {
+        "linkName":"Profile",
+        "linkPath":"/a7/twitter/profile",
+        "icon":"fas fa-user-alt"
+    },
+    {
+        "linkName":"More",
+        "linkPath":"",
+        "icon":"fas fa-ellipsis-h"
+    }
+]

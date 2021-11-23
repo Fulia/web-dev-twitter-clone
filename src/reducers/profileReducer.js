@@ -1,8 +1,7 @@
 
 
-const profileData = {
-    firstName: 'Simon',
-    lastName: 'Kjær',
+let profileData = {
+    Name: 'Simon Kjær',
     tweets: 1780,
     handle: 'simonkjaer1989',
     profilePicture: '/pics/kjaer.jpg',
@@ -22,10 +21,13 @@ const profileData = {
 
 const profileReducer = (state = profileData, action) => {  // initialize the reducer's state
     switch (action.type){
-        case "Updated profile":
-            return action.profileInfo;
+        case "update-profile":
+            return action.profile;
+        case "fetch-profile":
+            // console.log("fetch", action.profile)
+            return action.profile;
         default:
-            return profileData;
+            return state; // remember to return state not default profileData
     }                 // return the single static state
 };
 

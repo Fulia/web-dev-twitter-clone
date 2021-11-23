@@ -1,5 +1,5 @@
 import React from "react";
-import A6 from "./index";
+import A6 from "./A6";
 import History from "../history";
 
 const HelloWorld = () => {

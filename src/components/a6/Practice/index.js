@@ -3,7 +3,7 @@ import Classes from "./Classes";
 import Styles from "./Styles";
 import ConditionalOutput from "./ConditionalOutput/index";
 import TodoList from "./Todo/TodoList";
-import A6 from "../index";
+import A6 from "../A6";
 
 
 

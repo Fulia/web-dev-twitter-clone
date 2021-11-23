@@ -1,12 +1,12 @@
 
 const profileReducer = (state = false, action) => {  // initialize the reducer's state
     switch (action.type){
-        case "To edit profile":
+        case "open-edit-profile":
             return true;
-        case "Cancel update":
+        case "close-edit-profile":
             return false;
         default:
-            return false;
+            return state;
     }                 // return the single static state
 };
 

@@ -1,31 +1,41 @@
 import React, {useState} from "react";  // useState to deal with local changes
 import {useDispatch, useSelector} from "react-redux";
 import moment from "moment";
+import { updateProfile} from "../../../../../services/profileService";
  // to getting posts from the store
 
 const profData = (state) => state.profileRdc;
 
 
 const EditProfile = ({profileData}) => {
-    const profile = useSelector(profData);  // before update
-    let [profileInfo, setProfileInfo] = useState(profile);  // initialState: profile (to be updated)
+    const profile = useSelector(profData)  // before update
+    console.log("Fetched from reducer", profile)
+    const [profileInfo, setProfileInfo] = useState(profile);
+    // if (profile !== profileInfo) {
+    //     setProfileInfo(profile)
+    // }
+    // setProfileInfo(profile)// initialState: profile (to be updated)
+    console.log("profileInfo state 1", profileInfo)
     const dispatch = useDispatch();  // send action object to reducer
+    // useEffect(() => fetchProfile(dispatch), [dispatch])
+    console.log("profileInfo state 2", profileInfo)
+
     // handle delete tweet click event
     // notify redux reducer with delete-tweet event and
     // deleted tweet
-    const saveProfileChangeClickHandler = () => {
-        const profile = profileInfo
-        dispatch({  // action object
-            type: 'update-profile', // needs to be unique
-            profile
-        })
-        cancelEditProfileClickHandler();
+    const saveProfileEditClickHandler = () => {
+        // console.log("saveHandler", profileInfo)
+        updateProfile(dispatch, profileInfo)
+        closeEditProfileClickHandler()
+        // dispatch({  // action object
+        //     type: 'Updated profile', // needs to be unique
+        //     profileInfo
+        // })
     };
 
-    const cancelEditProfileClickHandler = () =>{
+    const closeEditProfileClickHandler = () =>{
         dispatch({
             type: "close-edit-profile",
-
         })
     }
 
@@ -60,9 +70,9 @@ const EditProfile = ({profileData}) => {
         <>
             <div className={"row align-items-center py-2"}>
                 {/*// onclick -> profile*/}
-                <i className="col-1 fas fa-times" onClick={cancelEditProfileClickHandler}/>
+                <i className="col-1 fas fa-times" onClick={closeEditProfileClickHandler}/>
                 <span className={"col-9 fw-bold"}>Edit profile</span>
-                <button className={"col-2 float-end rounded-pill btn btn-outline-dark"} onClick={saveProfileChangeClickHandler}>Save</button>
+                <button className={"col-2 float-end rounded-pill btn btn-outline-dark"} onClick={saveProfileEditClickHandler}>Save</button>
             </div>
             <label htmlFor={"bannerPic"}>
                 <i className="fas fa-camera position-relative"

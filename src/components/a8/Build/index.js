@@ -25,11 +25,11 @@ export const Build = () => {
         // provide the store to all child components
         <Provider store={store}>
             <div>
-                <Route path={["/a7/twitter", "/a7/twitter/home"]}
+                <Route path={["/a8/twitter", "/a8/twitter/home"]}
                        exact={true} component={HomeScreen}/>
-                <Route path="/a7/twitter/explore"
+                <Route path="/a8/twitter/explore"
                        exact={true} component={ExploreScreen}/>
-                <Route path={"/a7/twitter/profile"}
+                <Route path={"/a8/twitter/profile"}
                        exact={true} component={ProfileScreen}/>
             </div>
         </Provider>

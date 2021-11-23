@@ -1,12 +1,16 @@
 
 import {useSelector, useDispatch} from "react-redux";
-import moment from "moment";  // to getting posts from the store
+import moment from "moment";
+import {useEffect} from "react";
+import {fetchProfile} from "../../../../../services/profileService";  // to getting posts from the store
 
 const profData = (state) => state.profileRdc;
 const Profile = () => {
-    const profile = useSelector(profData);
+    const profile = useSelector(profData);  // initial state: array; reducer returned array; index 0: only one element
     const dispatch = useDispatch();
-    const openProfileEditHandler = () => {
+    useEffect(() => fetchProfile(dispatch), [dispatch])
+
+    const editProfileHandler = () => {
         dispatch({
             type: 'open-edit-profile'
         })
@@ -29,7 +33,7 @@ const Profile = () => {
                      height={"150px"}
                      src={profile.profilePicture} alt={"profile"}/>
                 <button className={"mt-3 me-3 float-end rounded-pill btn btn-outline-dark fw-bold"}
-                        onClick={openProfileEditHandler} >Edit Profile</button>
+                        onClick={editProfileHandler} >Edit Profile</button>
             <h5 className={"m-0"}>{profile.Name}</h5>
             <span className={"text-muted"}>@{profile.handle}</span>
             <div className={"my-2"}>{profile.bio}</div>

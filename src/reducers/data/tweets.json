@@ -1,5 +1,5 @@
 [
-    {   "_id": 123,
+    {   "_id": "123",
         "userName": "Elon Musk",
         "time": "23h",
         "avatar": "/pics/elonmusk_avatar.jpeg",
@@ -14,7 +14,7 @@
         "like": 375,
         "liked": false
     },
-    {   "_id": 456,
+    {   "_id": "456",
         "userName": "New York Post",
         "time": "23h",
         "avatar": "/pics/New-York-Post-Twitter.jpeg",
