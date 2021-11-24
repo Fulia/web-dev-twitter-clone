@@ -7,7 +7,7 @@ import A7 from "../../A7";
 
 // const active = window.location.pathname;
 
-const ExploreScreen = () => {
+export const ExploreScreen = () => {
     return(
         <>
             <A7/>
