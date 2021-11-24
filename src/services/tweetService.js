@@ -45,17 +45,17 @@ export const postNewTweet = (dispatch, newTweet) =>
 export const deleteTweet = (dispatch, tweet) =>
     fetch(TWEET_API + "/" + tweet._id, { // encode tweet ID at end of the URL
         method: 'DELETE'
-    }).then(response => dispatch({  // ignore response, just dispatch to reducer
+    }).then(tweet => dispatch({  // ignore response, just dispatch to reducer
         type: 'delete-tweet',  // send reducer a 'delete-tweet' event
         tweet // pass tweet to be deleted
     }));
 
 
 export const likeTweet = (dispatch, tweet) =>
-    fetch(TWEET_API + "/" + tweet._id + "/like", {
+    fetch(TWEET_API + "/" + tweet._id +"/like", {
         method: 'PUT'
     })
-        .then(response =>
+        .then(tweet =>
             dispatch({
                 type: 'like-tweet',
                 tweet
