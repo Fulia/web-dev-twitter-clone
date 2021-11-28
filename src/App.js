@@ -29,6 +29,8 @@ import profileScreenReducer from "./reducers/profileScreenReducer";
 import whoReducer from "./reducers/whoReducer";
 import postReducer from "./reducers/postReducer";
 import {combineReducers, createStore} from "redux";
+import A9 from "./a9";
+
 
 
 const reducer = combineReducers({
@@ -43,7 +45,6 @@ function App() {
   return (
       <BrowserRouter>
           <Provider store={store}>
-              <div className="container">
                   {/*<Route path={"/a8"}>*/}
                   {/*    <A8Build/>*/}
                   {/*</Route>*/}
@@ -55,6 +56,9 @@ function App() {
                   {/*</Route>*/}
 
                   {/*// routes for A8*/}
+                  <Route path={["/a9","/a9/practice"]}>
+                      <A9/>
+                  </Route>
                   <Route path={["/","/a8","/a8/practice"]} exact={true}>
                       <A8Practice/>
                   </Route>
@@ -94,7 +98,6 @@ function App() {
                   {/*       exact={true} component={HelloWorld}/>*/}
                   {/*<Route path={"/a6/practice"}*/}
                   {/*       exact={true} component={A6Practice}/>*/}
-              </div>
           </Provider>
       </BrowserRouter>
   );
