@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 import A8 from "../../A8";
 
 const showEdit = (state) => state.profScrRdc; // global  showEdit: state
-const ProfileScreen = () => {
+export const ProfileScreen = () => {
     const show = useSelector(showEdit)  // the value of showEdit state
     return(
         <>

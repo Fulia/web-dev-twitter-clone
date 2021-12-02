@@ -8,7 +8,7 @@ import A7 from "../../A7";
 
 
 
-const HomeScreen = () => {
+export const HomeScreen = () => {
     return(
         <>
             <A7/>

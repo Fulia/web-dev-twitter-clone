@@ -17,7 +17,8 @@ const WhatsHappening = () => {
         //                                     // saved in whatsHappening state variable
         //     }
         // );
-        postNewTweet(dispatch, {postContent: whatsHappening})
+        console.log("whatshappening", whatsHappening);
+        postNewTweet(dispatch, {postContent: whatsHappening});
 
     }
     return(

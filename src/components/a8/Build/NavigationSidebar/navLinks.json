@@ -1,12 +1,12 @@
 [
     {
         "linkName":"Home",
-        "linkPath":"/a7/twitter/home",
+        "linkPath":"/a8/twitter/home",
         "icon":"fas fa-home"
     },
     {
         "linkName":"Explore",
-        "linkPath":"/a7/twitter/explore",
+        "linkPath":"/a8/twitter/explore",
         "icon":"fas fa-hashtag"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "linkName":"Profile",
-        "linkPath":"/a7/twitter/profile",
+        "linkPath":"/a8/twitter/profile",
         "icon":"fas fa-user-alt"
     },
     {
