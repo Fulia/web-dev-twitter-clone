@@ -3,14 +3,15 @@ import './explore.css';
 import NavigationSidebar from "../NavigationSidebar/index";
 import WhoToFollowList from "../WhoToFollowList/index";
 import ExploreComponent from "./ExploreComponent";
-import A8 from "../../A8";
+import A9 from "../../index";
+// import A8 from "../..components/a8/A8";
 
 // const active = window.location.pathname;
 
-export const ExploreScreen = () => {
+const ExploreScreen = () => {
     return(
         <>
-            <A8/>
+            <A9/>
             <div className="row mt-2">
                 <div className="col-2 col-md-2 col-lg-1 col-xl-2">
                     <NavigationSidebar active="explore"/>

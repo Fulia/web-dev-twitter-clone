@@ -4,14 +4,15 @@ import '../ExploreScreen/explore.css';
 import Profile from "./profile/Profile";
 import EditProfile from "./profile/EditProfile";
 import {useSelector} from "react-redux";
-import A8 from "../../A8";
+import A9 from "../../index";
 
-const showEdit = (state) => state.profScrRdc; // global  showEdit: state
-export const ProfileScreen = () => {
+
+const showEdit = (state) => state.profScrRdcNew; // global  showEdit: state
+const ProfileScreen = () => {
     const show = useSelector(showEdit)  // the value of showEdit state
     return(
         <>
-            <A8/>
+            <A9/>
             <div className="row mt-2">
                 <div className="col-2">
                     <NavigationSidebar active="profile"/>

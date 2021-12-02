@@ -1,0 +1,62 @@
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+.gray-text{
+    color: gray;
+}
+
+
+
+.text-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.borderDark{
+    border: 1px solid #444444;
+}
+.b-radius-1{
+    border-radius: 1rem;
+}
+
+
+/*override styles*/
+
+
+a{
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -31,6 +31,9 @@ const A8 = () => {
             </Link> | &nbsp;
             <Link to="/a7">
                 A7
+            </Link> | &nbsp;
+            <Link to="/a9">
+                A9
             </Link>
 
         </>
